@@ -1,0 +1,43 @@
+# Запрет просмотра директорий
+Options -Indexes
+
+# Защита файлов
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Перенаправление всех ошибок на главную
+ErrorDocument 404 /
+ErrorDocument 403 /
+
+# Защита от просмотра критичных файлов
+<FilesMatch "\.(php|log)$">
+    Order Deny,Allow
+    Deny from all
+    Allow from 127.0.0.1
+</FilesMatch>
+
+# Разрешаем доступ только к необходимым файлам
+<FilesMatch "^(index|redirect)\.php$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Включаем движок преобразования
+RewriteEngine On
+
+# Базовая директория
+RewriteBase /
+
+# Запрещаем доступ к .htaccess
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Защита от XSS, кликджекинга и других уязвимостей
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Frame-Options "DENY"
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "same-origin"
